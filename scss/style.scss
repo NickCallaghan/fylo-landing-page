@@ -1,8 +1,10 @@
-
+@import "normalize";
 
 // ----- Colors -------//
 
 $bg-dark-main : hsl(218, 28%, 13%);
+$bg-dark-intro: hsl(217, 28%, 15%);
+
 $bg-dark-footer : hsl(216, 53%, 9%);
 $bg-dark-testimonial : hsl(219, 30%, 18%);
 
@@ -11,7 +13,7 @@ $accent-secondary : hsl(198, 60%, 50%);
 
 $white:hsl(0, 0%, 100%);
 
-// ----- Fonts --------//
+// ----- Fonts  & Typography --------//
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -24,33 +26,101 @@ h1, h2, h3, h4, .cta, .main-nav{
     color: $white;
 }
 
+h2 {
+    font-size: 1.3em;
+}
+
 body{
     font-family: 'Open Sans';
     color: $white;
+
+    p{
+        font-size: .9em;
+        letter-spacing: .1em;
+        line-height: 1.6em;
+    }
+
+    a{
+        font-size: .9em;
+        line-height: 1.6em;
+        text-decoration: none;
+    }
 }
+
+
+// ----- Toolbox Styles --------//
+
+button.cta{
+    padding: 18px 30px;
+    margin: 1em auto;
+    font-weight: 400;
+    border-radius: 50px;
+    width: 60%;
+    font-size: .9em;
+    background: $accent-primary;
+    border:none;
+    background: linear-gradient(170deg, $accent-primary 0%, $accent-secondary 75%);
+    cursor: pointer;
+}
+
+.info-link{
+    width: auto;
+    padding: 10px 0;
+    border-bottom: 2px solid $accent-primary;
+    flex-grow: 0;
+}
+
+figure.quote{
+    margin: 3em 40px;
+    padding: 25px 15px;
+    background-color: $bg-dark-testimonial;
+    border-radius: 5px;
+    
+    blockquote{
+        margin: 0;
+        font-size: .7em;
+        line-height: 2em;
+    }
+
+    figcaption{
+        display: flex;
+        margin: 1em auto;
+
+        img{
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            margin-right: 8px;
+        }
+
+        span.quote-name{
+            font-weight: bold;
+            font-size: .7em;
+            display: inline;
+        }
+
+        div.quote-company{
+            font-size: .5em;
+
+        }
+        
+    }
+}
+
 
 // ----- Custom Styles --------//
 
 body{
-    background-color: $bg-dark-main;
+    background-color: $bg-dark-intro;
+
+    a{
+        color: $accent-primary;
+    }
 }
 
 .container{
     width: 90%;
     margin: 0 auto;
-}
-
-button.cta{
-    padding: 15px 30px;
-    margin: 1em auto;
-    font-weight: 400;
-    border-radius: 50px;
-    width: 70%;
-    font-size: .9em;
-    background: $accent-primary;
-    border:none;
-    background: linear-gradient(170deg, $accent-primary 0%, $accent-secondary 75%);
-
 }
 
 .main-nav{
@@ -64,17 +134,19 @@ button.cta{
         
         img.main-logo{
             margin-right:auto;
-            max-width: 110px;
+            max-width: 100px;
         }
     }
 
     li{
    
         a{
+            font-size: .8em;
+            letter-spacing: .1em;
+            margin: auto 1em;
             text-decoration: none;
             color: $white;
             display: block;
-            border: 1px solid tomato;
         }
     }
 
@@ -84,13 +156,41 @@ button.cta{
 .hero{
 
     text-align: center;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
 
     img{
-        max-width: 100%;
+        max-width: 90%;
+        margin: 2em auto 4em auto;
     }
+
 }
 
 
 .sales-points{
     text-align: center;
+
+    .sp{
+        margin: auto auto 5em auto;
+
+        img{
+            margin-bottom: 2em;
+            width: 75px;
+            
+
+        }
+        .img-security{
+            width: 60px;
+        }
+
+    }
+}
+
+.secondary{
+    text-align: left;
+
+    img{
+        text-align: center;
+    }
 }
