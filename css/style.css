@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-h1, h2, h3, h4, .cta .main-nav {
+h1, h2, h3, h4, .cta, .main-nav {
   font-family: Raleway, arial, sans-serif;
+  word-spacing: .1em;
+  line-height: 1.5em;
   color: white;
 }
 
@@ -12,5 +14,61 @@ body {
 
 body {
   background-color: #181f2a;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+button.cta {
+  padding: 15px 30px;
+  margin: 1em auto;
+  font-weight: 400;
+  border-radius: 50px;
+  width: 70%;
+  font-size: .9em;
+  background: #65e2d9;
+  border: none;
+  background: linear-gradient(170deg, #65e2d9 0%, #339ecc 75%);
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0;
+}
+
+.main-nav li.logo {
+  margin-right: auto;
+}
+
+.main-nav li.logo img.main-logo {
+  margin-right: auto;
+  max-width: 110px;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  border: 1px solid tomato;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+.sales-points {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
