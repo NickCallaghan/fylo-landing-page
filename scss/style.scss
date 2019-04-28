@@ -92,7 +92,6 @@ button.cta, .rounded{
 .feature{
     text-align: center;
     padding: $padding;
-    margin-bottom: 4em;
     display: flex;
     flex-direction: column;
 
@@ -194,9 +193,8 @@ button.cta, .rounded{
     background-color: $bg-dark-intro;
     background-image: url(../images/bg-curvy-mobile.svg);
     background-repeat: no-repeat;
-    background-position-y: 20rem;
-    background-size: 100% auto;
-
+    background-position:bottom center;
+    background-size: 100% auto; 
 }
 
 
@@ -233,6 +231,7 @@ button.cta, .rounded{
     text-align: center;
     padding: $padding;
     margin: $padding;
+    border-radius: 5px;
 
     button.cta{
         width:100%;

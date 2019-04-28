@@ -416,7 +416,6 @@ button.cta, .rounded {
 .feature {
   text-align: center;
   padding: 1em 2em;
-  margin-bottom: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,7 +519,7 @@ button.cta, .rounded {
   background-color: #1c2431;
   background-image: url(../images/bg-curvy-mobile.svg);
   background-repeat: no-repeat;
-  background-position-y: 20rem;
+  background-position: bottom center;
   background-size: 100% auto;
 }
 
@@ -555,6 +554,7 @@ button.cta, .rounded {
   text-align: center;
   padding: 1em 2em;
   margin: 1em 2em;
+  border-radius: 5px;
 }
 
 .sign-up button.cta {
