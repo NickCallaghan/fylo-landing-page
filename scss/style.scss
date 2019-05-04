@@ -81,6 +81,10 @@ button.cta, .rounded{
     width: 100%;
 }
 
+.flex  {
+    display: flex;
+}
+
 .center{
     text-align: center;
 }
@@ -95,68 +99,21 @@ button.cta, .rounded{
 .feature{
     text-align: center;
     padding: $padding;
-    display: flex;
     flex-direction: column;
+    @include breakpoint(768){
+        max-width: 50%;
+        margin: auto;
+
+    }
 
     img{
         max-width: 90%;
         margin: 2em auto 4em auto;
-    }
-}
-
-.desktop-half-width-centered{
-    @include breakpoint(480){ 
-        max-width: $max-wid;
-        margin: auto;
-        margin-bottom: 3em;
-    }
-}
-
-.quotes{
-    background-image: url('../images/bg-quotes.png');
-    background-position-x: 3em;
-    background-position-y: 1.8em;
-    background-repeat: no-repeat;
-    padding: $padding;
-
-    figure.quote{
-        margin: 3em 40px;
-        padding: 25px 15px;
-        background-color: $bg-dark-testimonial;
-        border-radius: 5px;
         
-        blockquote{
-            margin: 0;
-            font-size: .7em;
-            line-height: 2em;
-        }
-
-        figcaption{
-            display: flex;
-            margin: 1em auto;
-            align-items: center; 
-
-            img{
-                border-radius: 50%;
-                width: 35px;
-                height: 35px;
-                margin-right: 8px;
-            }
-
-            div.quote-details{
-                
-                font-size: .6rem;
-                line-height: 1rem;
-                
-                span.quote-name{
-                    font-weight: bold;
-                    font-size: .8rem;
-                    display: inline;
-                }
-            }   
-        }
     }
 }
+
+
 
 
 // ----- Custom Styles --------//
@@ -219,6 +176,7 @@ button.cta, .rounded{
 .sales-points{
     text-align: center;
     padding: $padding;
+    
     @include breakpoint(480){
         display: flex;
         align-items: baseline;
@@ -245,22 +203,78 @@ button.cta, .rounded{
 
 .secondary{
     text-align: left;
-    @include breakpoint(480){
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: $padding-wide;
+    // @include breakpoint(480){
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    //     padding: $padding-wide;
+    // }
 
-        img {
-            max-width: 500px;
-            margin-right: 2em;
-        }
-    }
-
-    img{
+    img {
+        max-width: 500px;
+        margin-right: 2em;
         text-align: center;
     }
 }
+
+.quotes{
+    background-image: url('../images/bg-quotes.png');
+    background-position-x: 3em;
+    background-position-y: 1.8em;
+    background-repeat: no-repeat;
+    padding: $padding;
+
+    @include breakpoint(480){
+        display: flex;
+        flex-wrap: wrap;
+        padding: $padding-wide;
+
+    }
+
+    figure.quote{
+        margin: 3em 40px;
+        padding: 25px 15px;
+        background-color: $bg-dark-testimonial;
+        border-radius: 5px;
+        @include breakpoint(480){
+            flex: 1;
+            padding: 3em 10px;
+
+        }
+        
+        blockquote{
+            margin: 0;
+            font-size: .7em;
+            line-height: 2em;
+        }
+
+        figcaption{
+            display: flex;
+            margin: 1em auto;
+            align-items: center; 
+
+            img{
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                margin-right: 8px;
+            }
+
+            div.quote-details{
+                
+                font-size: .6rem;
+                line-height: 1rem;
+                
+                span.quote-name{
+                    font-weight: bold;
+                    font-size: .8rem;
+                    display: inline;
+                }
+            }   
+        }
+    }
+}
+
 
 .sign-up{
     background-color: $bg-dark-testimonial;
