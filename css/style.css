@@ -343,7 +343,34 @@ template {
   display: none;
 }
 
-* {
+/**
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for eight different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE: 
+ *	@include breakpoint(240)  { }
+ *	@include breakpoint(320)  { }
+ *	@include breakpoint(480)  { }
+ *	@include breakpoint(768)  { }
+ *	@include breakpoint(1024) { }
+ *	@include breakpoint(1140) { }
+ *	@include breakpoint(1280) { }
+ *	@include breakpoint(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author Ahmad Awais (https://github.com/ahmadawais)
+ */
+*, :before, :after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -428,6 +455,14 @@ button.cta, .rounded {
 .feature img {
   max-width: 90%;
   margin: 2em auto 4em auto;
+}
+
+@media (min-width: 480px) {
+  .desktop-half-width-centered {
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 3em;
+  }
 }
 
 .quotes {
@@ -523,13 +558,41 @@ button.cta, .rounded {
   background-size: 100% auto;
 }
 
+@media (min-width: 480px) {
+  .hero {
+    width: 100%;
+  }
+  .hero img {
+    max-width: 410px;
+  }
+}
+
 .sales-points {
   text-align: center;
   padding: 1em 2em;
 }
 
-.sales-points .sp {
-  margin: auto auto 5em auto;
+@media (min-width: 480px) {
+  .sales-points {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 1em 6em;
+  }
+}
+
+@media (min-width: 480px) {
+  .sales-points .sp {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    padding: 2rem;
+  }
 }
 
 .sales-points .sp img {
@@ -543,6 +606,26 @@ button.cta, .rounded {
 
 .secondary {
   text-align: left;
+}
+
+@media (min-width: 480px) {
+  .secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1em 6em;
+  }
+  .secondary img {
+    max-width: 500px;
+    margin-right: 2em;
+  }
 }
 
 .secondary img {
