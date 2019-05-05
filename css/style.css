@@ -509,6 +509,11 @@ button.cta, .rounded {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 100% auto;
+  text-align: center;
+}
+
+.hero img {
+  width: 80%;
 }
 
 @media (min-width: 480px) {
@@ -523,6 +528,7 @@ button.cta, .rounded {
 .sales-points {
   text-align: center;
   padding: 1em 2em;
+  margin-top: 2rem;
 }
 
 @media (min-width: 480px) {
@@ -537,6 +543,10 @@ button.cta, .rounded {
         flex-wrap: wrap;
     padding: 1em 6em;
   }
+}
+
+.sales-points .sp {
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 480px) {
@@ -559,12 +569,47 @@ button.cta, .rounded {
 
 .secondary {
   text-align: left;
+  padding: 1em 2em;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 480px) {
+  .secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1em 6em;
+  }
+  .secondary div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .secondary div a {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
 }
 
 .secondary img {
-  max-width: 500px;
-  margin-right: 2em;
-  text-align: center;
+  width: 80%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0;
+          flex: 0 0;
+  margin: 0  auto 3rem auto;
+  display: block;
 }
 
 .quotes {
